@@ -16,7 +16,7 @@ app.use(morgan("common"));
 
 app.get("/", (req: Request, res: Response) => {
     return res.status(200).json({
-      status : "online"
+      status : 'online'
     })
 });
 
@@ -25,8 +25,9 @@ app.use("/api/user",  userRouter);
 app.use("/api/post",  postRouter);
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
     console.log('Server is running');
 });
 
+export default app;
