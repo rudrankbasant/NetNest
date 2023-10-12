@@ -10,8 +10,6 @@ RUN npm install
 
 COPY . .
 
-RUN npx prisma migrate deploy
-
 RUN npm run build
 
 EXPOSE 8080
